@@ -38,8 +38,9 @@ export default async function handler(req, res) {
     const data = await response.json();
 
     if (data.error) {
-      console.error("Anthropic error:", data.error);
-      return res.status(500).json({ reply: "Erreur API. Reessaie dans un instant." });
+      console.error("Anthropic error:", JSON.stringify(data.error));
+      const msg = data.error.message || "Erreur inconnue";
+      return res.status(500).json({ reply: "Erreur API : " + msg });
     }
 
     const reply = data.content?.[0]?.text || "Pas de reponse generee.";
