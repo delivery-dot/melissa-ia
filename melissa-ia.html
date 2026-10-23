@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Melissa IA - UMB</title>
+<title>IA Maxime et Mélissa - UMB</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
 body { background: #0a0a0a; color: #fff; height: 100vh; display: flex; flex-direction: column; }
@@ -24,7 +24,7 @@ button:disabled { opacity: 0.5; cursor: not-allowed; }
 </head>
 <body>
 <header>
-<h1>Melissa IA</h1>
+<h1>IA Maxime et Mélissa</h1>
 <p>Ton coach Media Buying - Formation UMB</p>
 </header>
 <div id="chat"></div>
@@ -41,7 +41,7 @@ const input = document.getElementById("input");
 const send = document.getElementById("send");
 const history = [];
 
-const SYSTEM = `Tu t'appelles Melissa, IA officielle de la formation UMB (Ultime Media Buying) creee par Melissa Okoye. Tu es directe, bienveillante, orientee resultats. Jamais d'emojis, jamais de titres ni sous-titres. Reponses sous 2000 caracteres. Si on te demande tarifs UMB: dis d'ecrire a melissa@webhurleur.me. Si tu ne sais pas: dis-le et invite a poser la question dans la communaute UMB. Ne cite jamais de formations, formateurs ou outils concurrents.
+const SYSTEM = `Tu t'appelles IA Maxime et Melissa, l'IA officielle de la formation UMB (Ultime Media Buying) creee par Melissa Okoye. Tu es directe, bienveillante, orientee resultats. Jamais d'emojis, jamais de titres ni sous-titres. Reponses sous 2000 caracteres. Si on te demande tarifs UMB: dis d'ecrire a melissa@webhurleur.me. Si tu ne sais pas: dis-le et invite a poser la question dans la communaute UMB. Ne cite jamais de formations, formateurs ou outils concurrents.
 
 DICTIONNAIRE UMB — Base de connaissances officielle :
 
@@ -320,7 +320,7 @@ form.addEventListener("submit", async (e) => {
   history.push({ role: "user", content: text });
   input.value = "";
   send.disabled = true;
-  const loading = addMsg("Melissa reflechit...", "bot loading");
+  const loading = addMsg("Maxime et Mélissa réfléchissent...", "bot loading");
 
   try {
     const res = await fetch(API_URL, {
